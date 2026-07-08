@@ -1,25 +1,25 @@
 class Dda < Formula
   desc "Scan a directory tree for dependency directories (node_modules, target, .venv, …) and report how much space they use."
   homepage "https://github.com/hco/dependency-dir-analyzer"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.1.0/dependency-dir-analyzer-aarch64-apple-darwin.tar.xz"
-      sha256 "3d3eebc9389e07eb07f356d6c41ff97a5f2c9ef84f44909c92eb21a80156a278"
+      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.1.1/dependency-dir-analyzer-aarch64-apple-darwin.tar.xz"
+      sha256 "b6cdbfb1ec2f4c4a1dccb141f5bacf5d21a45cb588e7401390032043cda5d5a7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.1.0/dependency-dir-analyzer-x86_64-apple-darwin.tar.xz"
-      sha256 "71fe1a046663382050b6ba94429b798542d50b6ae55526a4de70fb57196c4d48"
+      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.1.1/dependency-dir-analyzer-x86_64-apple-darwin.tar.xz"
+      sha256 "87e996496f665f0db509dcacafd881ff8e59f243d6632389a448764237b197d4"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.1.0/dependency-dir-analyzer-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "da367be1b49916b26d9dd88189c450e8e92e0a92bb293a96ce59908e5c666c84"
+      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.1.1/dependency-dir-analyzer-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f83ed283b0af3402b3cba5f9106d7327db506ea920ec754ac649f650a9e673b8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.1.0/dependency-dir-analyzer-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ecec6b137e041ff759229b71871113826b8cdff511317344b052556ef05e32e0"
+      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.1.1/dependency-dir-analyzer-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "660617b563f6f01aa346412f982027df022b9e3e29be086ece068bfe986d544a"
     end
   end
   license "MIT"
