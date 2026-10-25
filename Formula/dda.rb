@@ -1,25 +1,25 @@
 class Dda < Formula
   desc "Scan a directory tree for dependency directories (node_modules, target, .venv, …) and report how much space they use."
   homepage "https://github.com/hco/dependency-dir-analyzer"
-  version "0.1.1"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.1.1/dependency-dir-analyzer-aarch64-apple-darwin.tar.xz"
-      sha256 "b6cdbfb1ec2f4c4a1dccb141f5bacf5d21a45cb588e7401390032043cda5d5a7"
+      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.2.0/dependency-dir-analyzer-aarch64-apple-darwin.tar.xz"
+      sha256 "4909658d926908d57052a6d97231237d2b4ccee819e541248dd3d34f21688a37"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.1.1/dependency-dir-analyzer-x86_64-apple-darwin.tar.xz"
-      sha256 "87e996496f665f0db509dcacafd881ff8e59f243d6632389a448764237b197d4"
+      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.2.0/dependency-dir-analyzer-x86_64-apple-darwin.tar.xz"
+      sha256 "382a748817f7c14490eace07d62027ed9661a0d0f9a438b96a29c6e280e4e296"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.1.1/dependency-dir-analyzer-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f83ed283b0af3402b3cba5f9106d7327db506ea920ec754ac649f650a9e673b8"
+      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.2.0/dependency-dir-analyzer-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ee6c0a5969a932065037b8dacec132d7044428e1f21ec9dcbd07215e6566bafb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.1.1/dependency-dir-analyzer-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "660617b563f6f01aa346412f982027df022b9e3e29be086ece068bfe986d544a"
+      url "https://github.com/hco/dependency-dir-analyzer/releases/download/v0.2.0/dependency-dir-analyzer-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "dc5ead70e43d58760cbb042682fcf7ff18db5fa3a99692ead61a5447f29f66d5"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Dda < Formula
   end
 
   def install
-    bin.install "dda" if OS.mac? && Hardware::CPU.arm?
-    bin.install "dda" if OS.mac? && Hardware::CPU.intel?
-    bin.install "dda" if OS.linux? && Hardware::CPU.arm?
-    bin.install "dda" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "dda"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "dda"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "dda"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "dda"
+    end
 
     install_binary_aliases!
 
